@@ -7,9 +7,10 @@ namespace MyApp.Namespace
   [ApiController]
   public class WeatherForecastController : ControllerBase
   {
-    public IEnumerable<int> Get()
+    [HttpGet]
+    public IEnumerable<string> Get()
     {
-      return Enumerable.Range(1, 5);
+      return Enumerable.Range(1, 5).Select(x => x < 5 ? x.ToString() : DateTime.UtcNow.ToString("yyyMMdd_HHmmss"));
     }
   }
 }
