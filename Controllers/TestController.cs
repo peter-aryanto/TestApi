@@ -5,7 +5,7 @@ namespace MyApp.Namespace
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class WeatherForecastController : ControllerBase
+  public class TestController : ControllerBase
   {
     [HttpGet]
     public IEnumerable<string> Get()
